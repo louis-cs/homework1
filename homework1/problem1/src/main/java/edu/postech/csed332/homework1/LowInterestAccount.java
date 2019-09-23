@@ -8,6 +8,17 @@ package edu.postech.csed332.homework1;
 class LowInterestAccount implements Account {
     //TODO implement this
 
+    private double initialBalance;
+    private String owner;
+    private double balance;
+    private int accountNb;
+
+    public LowInterestAccount(String name, double initial, int AccNb){
+        this.owner=name;
+        this.initialBalance=initial;
+        this.accountNb=AccNb;
+    }
+
     public int getAccountNumber() {
         //TODO implement this
         return 0;

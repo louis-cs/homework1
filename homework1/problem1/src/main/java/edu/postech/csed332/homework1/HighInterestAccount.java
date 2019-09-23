@@ -9,6 +9,17 @@ package edu.postech.csed332.homework1;
 class HighInterestAccount implements Account {
     //TODO implement this
 
+    private double initialBalance;
+    private String owner;
+    private double balance;
+    private int accNumber;
+
+    public HighInterestAccount(String name, double initial, int accNb){
+        this.owner=name;
+        this.initialBalance=initial;
+        this.accNumber=accNb;
+    }
+
     public int getAccountNumber() {
         //TODO implement this
         return 0;

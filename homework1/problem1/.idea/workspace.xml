@@ -1,7 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4c42f1b8-0d92-4a85-9e8a-1fe077ff5651" name="Default Changelist" comment="" />
+    <list default="true" id="4c42f1b8-0d92-4a85-9e8a-1fe077ff5651" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/postech/csed332/homework1/Bank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/postech/csed332/homework1/Bank.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/postech/csed332/homework1/HighInterestAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/postech/csed332/homework1/HighInterestAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/postech/csed332/homework1/LowInterestAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/postech/csed332/homework1/LowInterestAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../problem1/.idea/$PRODUCT_WORKSPACE_FILE$" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../problem1/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../problem1/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../problem1/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../problem1/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../problem1/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../problem1/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../problem1/src/main/java/edu/postech/csed332/homework1/ACCTYPE.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../problem1/src/main/java/edu/postech/csed332/homework1/Account.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../problem1/src/main/java/edu/postech/csed332/homework1/Bank.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../problem1/src/main/java/edu/postech/csed332/homework1/HighInterestAccount.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../problem1/src/main/java/edu/postech/csed332/homework1/IllegalOperationException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../problem1/src/main/java/edu/postech/csed332/homework1/LowInterestAccount.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../problem1/src/test/java/edu/postech/csed332/homework1/BankTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../problem2/.idea/$PRODUCT_WORKSPACE_FILE$" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../problem2/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../problem2/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../problem2/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../problem2/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../problem2/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../problem2/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../problem2/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../problem2/src/main/java/edu/postech/csed332/homework1/AirMob.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../problem2/src/main/java/edu/postech/csed332/homework1/AirTower.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../problem2/src/main/java/edu/postech/csed332/homework1/GUIPanel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../problem2/src/main/java/edu/postech/csed332/homework1/GameBoard.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../problem2/src/main/java/edu/postech/csed332/homework1/GameUI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../problem2/src/main/java/edu/postech/csed332/homework1/GroundMob.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../problem2/src/main/java/edu/postech/csed332/homework1/GroundTower.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../problem2/src/main/java/edu/postech/csed332/homework1/Monster.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../problem2/src/main/java/edu/postech/csed332/homework1/Position.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../problem2/src/main/java/edu/postech/csed332/homework1/Tower.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../problem2/src/main/java/edu/postech/csed332/homework1/Unit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../problem2/src/main/resources/airMob.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../problem2/src/main/resources/airTower.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../problem2/src/main/resources/ground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../problem2/src/main/resources/groundMob.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../problem2/src/main/resources/groundTower.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../problem2/src/main/resources/slot.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../problem2/src/test/java/edu/postech/csed332/homework1/GameTest.java" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,11 +58,16 @@
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1QjAnXBZ9Ug74JQdf8lA4xIMdnl" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -82,6 +134,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
