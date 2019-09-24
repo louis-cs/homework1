@@ -13,7 +13,7 @@ public class GroundMob implements Monster {
 
     private Position pos;
 
-    public GroundMob(GameBoard board, Position initPos) {
+    public GroundMob(GameBoard board) {
         // TODO: implement this
     }
 

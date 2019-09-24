@@ -121,8 +121,12 @@ public class GameBoard {
      * @return the set of units at position p
      */
     public Set<Unit> getUnitsAt(Position p) {
-        // TODO: implement this
-        return Collections.emptySet();
+        Set<Unit> unitsHere = new TreeSet<>();
+        unitIterator=units.iterator();
+        while (unitIterator.hasNext()){
+            if (unitIterator.next().getPosition().equals(p)) unitsHere.add(unitIterator.next());
+        }
+        return unitsHere;
     }
 
     /**
@@ -131,8 +135,7 @@ public class GameBoard {
      * @return the set of all monsters
      */
     public Set<Monster> getMonsters() {
-        // TODO: implement this
-        return Collections.emptySet();
+        return monsters;
     }
 
     /**
@@ -141,8 +144,7 @@ public class GameBoard {
      * @return the set of all towers
      */
     public Set<Tower> getTowers() {
-        // TODO: implement this
-        return Collections.emptySet();
+        return towers;
     }
 
     /**
@@ -184,8 +186,7 @@ public class GameBoard {
      * @return the number of the monsters
      */
     public int getNumMobs() {
-        // TODO: implement this
-        return 0;
+        return monsters.size();
     }
 
     /**
@@ -194,8 +195,7 @@ public class GameBoard {
      * @return the number of the towers
      */
     public int getNumTowers() {
-        // TODO: implement this
-        return 0;
+return towers.size();
     }
 
     /**
@@ -205,8 +205,7 @@ public class GameBoard {
      * @return the number of the monsters removed
      */
     public int getNumMobsKilled() {
-        // TODO: implement this
-        return 0;
+        return NumMobsKilled;
     }
 
     /**
@@ -216,8 +215,7 @@ public class GameBoard {
      * @return the number of the monsters escaped
      */
     public int getNumMobsEscaped() {
-        // TODO: implement this
-        return 0;
+        return NumMobsEscaped;
     }
 
     /**

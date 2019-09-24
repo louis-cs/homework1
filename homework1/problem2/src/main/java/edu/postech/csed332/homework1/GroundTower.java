@@ -14,7 +14,7 @@ public class GroundTower implements Tower {
 
     private Position pos;
 
-    public GroundTower(GameBoard board, Position initPos) {
+    public GroundTower(GameBoard board) {
         // TODO: implement this
     }
 
