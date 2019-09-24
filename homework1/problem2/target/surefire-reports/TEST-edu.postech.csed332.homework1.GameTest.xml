@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="edu.postech.csed332.homework1.GameTest" time="0.038" tests="5" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="edu.postech.csed332.homework1.GameTest" time="0.037" tests="5" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -17,7 +17,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="FR"/>
     <property name="sun.boot.library.path" value="D:\Program files\JavaDK\bin"/>
-    <property name="sun.java.command" value="C:\Users\louis\AppData\Local\Temp\surefire5522450308527416333\surefirebooter6488519538388954602.jar C:\Users\louis\AppData\Local\Temp\surefire5522450308527416333 2019-09-24T23-46-15_711-jvmRun1 surefire7965857280177151696tmp surefire_04006006879973803287tmp"/>
+    <property name="sun.java.command" value="C:\Users\louis\AppData\Local\Temp\surefire9594350517749032414\surefirebooter16716058983056107595.jar C:\Users\louis\AppData\Local\Temp\surefire9594350517749032414 2019-09-24T23-47-55_620-jvmRun1 surefire4555540280575168834tmp surefire_07579849653326393291tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="D:\Documents\Course Notes\Software Design Methods\homework1\homework1\problem2\target\test-classes;D:\Documents\Course Notes\Software Design Methods\homework1\homework1\problem2\target\classes;C:\Users\louis\.m2\repository\org\junit\jupiter\junit-jupiter\5.5.2\junit-jupiter-5.5.2.jar;C:\Users\louis\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.5.2\junit-jupiter-api-5.5.2.jar;C:\Users\louis\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\louis\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\louis\.m2\repository\org\junit\platform\junit-platform-commons\1.5.2\junit-platform-commons-1.5.2.jar;C:\Users\louis\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.5.2\junit-jupiter-params-5.5.2.jar;C:\Users\louis\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.5.2\junit-jupiter-engine-5.5.2.jar;C:\Users\louis\.m2\repository\org\junit\platform\junit-platform-engine\1.5.2\junit-platform-engine-1.5.2.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -33,7 +33,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\louis\AppData\Local\Temp\surefire5522450308527416333\surefirebooter6488519538388954602.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\louis\AppData\Local\Temp\surefire9594350517749032414\surefirebooter16716058983056107595.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="12.0.2+10"/>
@@ -58,9 +58,9 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="56.0"/>
   </properties>
-  <testcase name="testPlaceUnit" classname="edu.postech.csed332.homework1.GameTest" time="0.025"/>
-  <testcase name="testPlaceTwoUnits" classname="edu.postech.csed332.homework1.GameTest" time="0"/>
+  <testcase name="testPlaceUnit" classname="edu.postech.csed332.homework1.GameTest" time="0.024"/>
+  <testcase name="testPlaceTwoUnits" classname="edu.postech.csed332.homework1.GameTest" time="0.001"/>
   <testcase name="testGroundAttack" classname="edu.postech.csed332.homework1.GameTest" time="0.001"/>
-  <testcase name="testPlaceUnitInvalid" classname="edu.postech.csed332.homework1.GameTest" time="0.003"/>
-  <testcase name="testGameBoard" classname="edu.postech.csed332.homework1.GameTest" time="0.001"/>
+  <testcase name="testPlaceUnitInvalid" classname="edu.postech.csed332.homework1.GameTest" time="0.002"/>
+  <testcase name="testGameBoard" classname="edu.postech.csed332.homework1.GameTest" time="0"/>
 </testsuite>
