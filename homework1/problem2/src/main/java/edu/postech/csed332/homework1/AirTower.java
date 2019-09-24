@@ -1,6 +1,6 @@
 package edu.postech.csed332.homework1;
 
-import java.util.Set;
+import java.util.*;
 
 /**
  * An air tower that can attack nearby air monsters within 1 tile of distance.
@@ -14,9 +14,10 @@ import java.util.Set;
 public class AirTower implements Tower {
 
     private Position pos;
+    private GameBoard board;
 
     public AirTower(GameBoard board) {
-        // TODO: implement this
+        this.board=board;
     }
 
     public void setPos(Position pos){
@@ -25,13 +26,30 @@ public class AirTower implements Tower {
 
     @Override
     public Set<Monster> attack() {
-        // TODO: implement this
-        return null;
+        Set<Monster> killedMonsters = new TreeSet<>();
+        TreeSet<Unit> up = (TreeSet) getBoard().getUnitsAt(pos.getRelativePosition(0,1)); /*get all units adjacent to the tower*/
+        TreeSet<Unit> down = (TreeSet) getBoard().getUnitsAt(pos.getRelativePosition(0,-1));
+        TreeSet<Unit> left = (TreeSet) getBoard().getUnitsAt(pos.getRelativePosition(-1,0));
+        TreeSet<Unit> right = (TreeSet) getBoard().getUnitsAt(pos.getRelativePosition(1,0));
+        for (int i=0; i<2; i++){                /*add all adjacent ground monsters to the list of killed monsters*/
+            if (up.first() instanceof AirMob) {
+                killedMonsters.add((Monster)up.pollFirst());
+            }
+            if (down.first() instanceof AirMob) {
+                killedMonsters.add((Monster)down.pollFirst());
+            }
+            if (left.first() instanceof AirMob) {
+                killedMonsters.add((Monster)left.pollFirst());
+            }
+            if (right.first() instanceof AirMob) {
+                killedMonsters.add((Monster)right.pollFirst());
+            }
+        }
+        return killedMonsters;
     }
 
     @Override
     public GameBoard getBoard() {
-        // TODO: implement this
-        return null;
+        return this.board;
     }
 }

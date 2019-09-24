@@ -12,9 +12,10 @@ package edu.postech.csed332.homework1;
 public class GroundMob implements Monster {
 
     private Position pos;
+    private GameBoard board;
 
     public GroundMob(GameBoard board) {
-        // TODO: implement this
+        this.board = board;
     }
 
     public void setPos(Position pos){

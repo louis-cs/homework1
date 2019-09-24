@@ -12,9 +12,10 @@ package edu.postech.csed332.homework1;
 public class AirMob implements Monster {
 
     private Position pos;
+    private GameBoard board;
 
     public AirMob(GameBoard board) {
-        // TODO: implement this
+        this.board=board;
     }
 
     public void setPos(Position pos){
@@ -29,7 +30,6 @@ public class AirMob implements Monster {
 
     @Override
     public boolean isGround() {
-        // TODO: implement this
         return false;
     }
 
