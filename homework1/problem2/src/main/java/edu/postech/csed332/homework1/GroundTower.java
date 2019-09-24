@@ -26,7 +26,6 @@ public class GroundTower implements Tower {
 
     @Override
     public Set<Monster> attack() {
-        // TODO: implement this
         Set<Monster> killedMonsters = new TreeSet<>();
         TreeSet<Unit> up = (TreeSet) getBoard().getUnitsAt(pos.getRelativePosition(0,1)); /*get all units adjacent to the tower*/
         TreeSet<Unit> down = (TreeSet) getBoard().getUnitsAt(pos.getRelativePosition(0,-1));
