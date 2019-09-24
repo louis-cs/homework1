@@ -22,6 +22,14 @@ public class GameBoard {
     private final int width, height;
 
     // TODO: add more fields to implement this class
+    private Set<Tower> towers;
+    private Set<Monster> monsters;
+    private Set<Unit> units;
+    private Iterator<Tower> towerIterator;
+    private Iterator<Monster> monsterIterator;
+    private Iterator<Unit> unitIterator;
+    private int NumMobsKilled;
+    private int NumMobsEscaped;
 
     /**
      * Creates a game board with a given width and height. The goal position
@@ -36,6 +44,12 @@ public class GameBoard {
         goal = new Position(width - 1, height / 2);
 
         // TODO: add more lines if needed.
+
+        this.towers = new TreeSet<>();
+        this.monsters = new TreeSet<>();
+        this.units = new TreeSet<>();
+        this.NumMobsEscaped=0;
+        this.NumMobsKilled=0;
     }
 
     /**
@@ -47,6 +61,43 @@ public class GameBoard {
      */
     public void placeUnit(Unit obj, Position p) {
         // TODO: implement this
+        if ((p.getX() > this.width) || (p.getY() > this.height) || (p.getX()<0) || (p.getY()<0)){ /*checking if p is on the board */
+            throw new IllegalArgumentException("position not on game board");
+        }
+        else if (obj.isGround()){                               /*checking if no unit is in p*/
+            unitIterator = units.iterator();
+            while (unitIterator.hasNext()){
+                if ((unitIterator.next().isGround()) && (unitIterator.next().getPosition().equals(p))){
+                    throw new IllegalArgumentException("Ground unit already on this board space");
+                }
+            }
+        }
+        else if (!(obj.isGround())){
+            unitIterator = units.iterator();
+            while (unitIterator.hasNext()){
+                if (!(unitIterator.next().isGround()) && (unitIterator.next().getPosition().equals(p))){
+                    throw new IllegalArgumentException("Air unit already on this board space");
+                }
+            }
+        }
+        if (obj instanceof GroundTower){
+            ((GroundTower) obj).setPos(p);
+            towers.add((Tower)obj);
+        }
+        else if (obj instanceof AirTower){
+            ((AirTower) obj).setPos(p);
+            towers.add((Tower)obj);
+        }
+        else if (obj instanceof AirMob){
+            ((AirMob) obj).setPos(p);
+            monsters.add((Monster)obj);
+        }
+        else if (obj instanceof GroundMob){
+            ((GroundMob) obj).setPos(p);
+            monsters.add((Monster)obj);
+        }
+        units.add(obj);
+
     }
 
     /**
@@ -55,6 +106,11 @@ public class GameBoard {
      */
     public void clear() {
         // TODO: implement this
+        units.clear();
+        monsters.clear();
+        towers.clear();
+        NumMobsKilled=0;
+        NumMobsEscaped=0;
     }
 
     /**
@@ -96,8 +152,7 @@ public class GameBoard {
      * @return the position of obj
      */
     public Position getPosition(Unit obj) {
-        // TODO: implement this
-        return null;
+        return obj.getPosition();
     }
 
     /**

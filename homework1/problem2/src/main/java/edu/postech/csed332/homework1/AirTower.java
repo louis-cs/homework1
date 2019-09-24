@@ -10,10 +10,17 @@ import java.util.Set;
  * Feel free to modify this file, e.g., adding new fields or methods. If needed,
  * you can define a new (abstract) super class that this class inherits.
  */
+
 public class AirTower implements Tower {
+
+    private Position pos;
 
     public AirTower(GameBoard board) {
         // TODO: implement this
+    }
+
+    public void setPos(Position pos){
+        this.pos=pos;
     }
 
     @Override

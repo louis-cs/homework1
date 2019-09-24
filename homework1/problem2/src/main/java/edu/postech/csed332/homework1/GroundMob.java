@@ -11,8 +11,14 @@ package edu.postech.csed332.homework1;
  */
 public class GroundMob implements Monster {
 
-    public GroundMob(GameBoard board) {
+    private Position pos;
+
+    public GroundMob(GameBoard board, Position initPos) {
         // TODO: implement this
+    }
+
+    public void setPos(Position pos){
+        this.pos=pos;
     }
 
     @Override

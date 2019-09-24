@@ -11,8 +11,14 @@ package edu.postech.csed332.homework1;
  */
 public class AirMob implements Monster {
 
+    private Position pos;
+
     public AirMob(GameBoard board) {
         // TODO: implement this
+    }
+
+    public void setPos(Position pos){
+        this.pos=pos;
     }
 
     @Override

@@ -12,8 +12,14 @@ import java.util.Set;
  */
 public class GroundTower implements Tower {
 
-    public GroundTower(GameBoard board) {
+    private Position pos;
+
+    public GroundTower(GameBoard board, Position initPos) {
         // TODO: implement this
+    }
+
+    public void setPos(Position pos){
+        this.pos=pos;
     }
 
     @Override
