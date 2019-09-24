@@ -2,12 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c42f1b8-0d92-4a85-9e8a-1fe077ff5651" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/postech/csed332/homework1/Bank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/postech/csed332/homework1/Bank.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/postech/csed332/homework1/HighInterestAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/postech/csed332/homework1/HighInterestAccount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/postech/csed332/homework1/LowInterestAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/postech/csed332/homework1/LowInterestAccount.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../problem1/.idea/$PRODUCT_WORKSPACE_FILE$" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../problem1/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../problem1/.idea/compiler.xml" beforeDir="false" />
