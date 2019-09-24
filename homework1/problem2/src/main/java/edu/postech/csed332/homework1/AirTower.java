@@ -52,4 +52,9 @@ public class AirTower implements Tower {
     public GameBoard getBoard() {
         return this.board;
     }
+
+    @Override
+    public Position getPosition(){
+        return this.pos;
+    }
 }

@@ -27,7 +27,7 @@ public class GroundMob implements Monster {
     @Override
     public Position move() {
         Position next;
-        if (board.getGoalPosition().getX()-this.getPosition().getX() > board.getGoalPosition().getY()-this.getPosition().getY()){ /*if there's more lateral that vertical movement to be done*/
+        if (board.getGoalPosition().getX()-this.pos.getX() > board.getGoalPosition().getY()-this.pos.getY()){ /*if there's more lateral that vertical movement to be done*/
             next = this.getPosition().getRelativePosition(1,0);
         }
         else{
@@ -48,5 +48,10 @@ public class GroundMob implements Monster {
     @Override
     public GameBoard getBoard() {
         return this.board;
+    }
+
+    @Override
+    public Position getPosition(){
+        return this.pos;
     }
 }

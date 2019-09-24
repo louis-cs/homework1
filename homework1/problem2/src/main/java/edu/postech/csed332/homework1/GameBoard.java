@@ -21,7 +21,6 @@ public class GameBoard {
     private final Position goal;
     private final int width, height;
 
-    // TODO: add more fields to implement this class
     private Set<Tower> towers;
     private Set<Monster> monsters;
     private Set<Unit> units;
@@ -43,7 +42,6 @@ public class GameBoard {
         this.height = height;
         goal = new Position(width - 1, height / 2);
 
-        // TODO: add more lines if needed.
 
         this.towers = new TreeSet<>();
         this.monsters = new TreeSet<>();
@@ -60,7 +58,6 @@ public class GameBoard {
      * @throws IllegalArgumentException if p is outside the bounds of the board.
      */
     public void placeUnit(Unit obj, Position p) {
-        // TODO: implement this
         if ((p.getX() > this.width) || (p.getY() > this.height) || (p.getX()<0) || (p.getY()<0)){ /*checking if p is on the board */
             throw new IllegalArgumentException("position not on game board");
         }
@@ -105,7 +102,6 @@ public class GameBoard {
      * for game statistics are reset to 0.
      */
     public void clear() {
-        // TODO: implement this
         units.clear();
         monsters.clear();
         towers.clear();
@@ -164,7 +160,33 @@ public class GameBoard {
      * (3) All remaining monsters (neither escaped nor attacked) moves (using the goal method).
      */
     public void step() {
-        // TODO: implement this
+        monsterIterator=monsters.iterator();
+        while (monsterIterator.hasNext()){
+            if(monsterIterator.next().getPosition().equals(this.goal)){
+                monsters.remove(monsterIterator.next());
+                NumMobsEscaped+=1;
+            }
+        }
+        towerIterator=towers.iterator();
+        while (towerIterator.hasNext()){
+            TreeSet<Monster> killedMobs = (TreeSet)towerIterator.next().attack();
+            monsterIterator=killedMobs.iterator();
+            while (monsterIterator.hasNext()) {
+                monsters.remove(monsterIterator.next());
+                NumMobsKilled += 1;
+            }
+        }
+        monsterIterator=monsters.iterator();
+        while (monsterIterator.hasNext()){
+            if (monsterIterator.next() instanceof AirMob){
+                Position nextMove = monsterIterator.next().move();
+                ((AirMob) monsterIterator.next()).setPos(nextMove);
+            }
+            else if (monsterIterator.next() instanceof GroundMob){
+                Position nextMove = monsterIterator.next().move();
+                ((GroundMob) monsterIterator.next()).setPos(nextMove);
+            }
+        }
     }
 
     /**
@@ -176,8 +198,30 @@ public class GameBoard {
      * @return true if there is no problem. false otherwise.
      */
     public boolean isValid() {
-        // TODO: implement this
-        return false;
+        boolean isValid = true;
+        unitIterator=units.iterator();
+        while(unitIterator.hasNext()){
+            if (unitIterator.next().getPosition().getX() > this.width){
+                isValid = false;
+                break;
+            }
+            else if (unitIterator.next().getPosition().getY() > this.height){
+                isValid = false;
+                break;
+            }
+            else{
+                TreeSet<Unit> localUnits = (TreeSet)this.getUnitsAt(unitIterator.next().getPosition()); /*check every unit at the current position*/
+                if (localUnits.size()>1){
+                    localUnits.remove(unitIterator.next());
+                    if ((localUnits.first().isGround() && (unitIterator.next().isGround())) /*2 air units or ground units on the same tile*/
+                        || !(localUnits.first().isGround()) && !(unitIterator.next().isGround())){
+                        isValid = false;
+                        break;
+                    }
+                }
+            }
+        }
+        return isValid;
     }
 
     /**
