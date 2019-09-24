@@ -12,13 +12,13 @@ public class Bank {
     // TODO: add more fields to implement this class
     // (hint: use Java Collection Framework, including List, Map, Set, etc.)
     ArrayList<Account> accounts;
-    static private int lastAccNb;
+    private int lastAccNb;
     /**
      * Create a bank. Initially, there is no account.
      */
     public Bank() {
-        // TODO implement this
         lastAccNb=100000;
+        accounts = new ArrayList<>();
     }
 
     /**
@@ -28,10 +28,9 @@ public class Bank {
      * @return the account with number accNum; null if no such account exists
      */
     Account findAccount(int accNum) {
-        // TODO implement this
         int ind = accNum - 100000;
-        if ((ind > 0 ) & (ind <= this.accounts.size())){ /*if the account nb is in the list */
-            return accounts.get(accNum);
+        if ((ind >= 0 ) & (ind <= this.accounts.size())){ /*if the account nb is in the list */
+            return accounts.get(ind);
         }
         return null;
     }
@@ -43,7 +42,6 @@ public class Bank {
      * @return a list of accounts sorted in ascending order by account number
      */
     ArrayList<Account> findAccountByName(String name) {
-        // TODO implement this
         ArrayList<Account> ownedAccounts = new ArrayList<>();
         for (int i=0; i<accounts.size(); i++){
             if (accounts.get(i).getOwner().equals(name)){
@@ -62,20 +60,21 @@ public class Bank {
      * @return the newly created account; null if not possible
      */
     Account createAccount(String name, ACCTYPE accType, double initial) {
-        // TODO implement this
         Account createdAcc=null;
         if (accType.equals(ACCTYPE.HIGH)){
             if (initial<1000) System.out.println("High interest account created with insufficient funds");
             else {
-                createdAcc = new HighInterestAccount(name, initial, lastAccNb);
-                lastAccNb++;
+                createdAcc = new HighInterestAccount(name, initial, this.lastAccNb);
+                this.accounts.add(createdAcc);
+                this.lastAccNb++;
             }
         }
         else if (accType.equals(ACCTYPE.LOW)){
-            createdAcc = new LowInterestAccount(name,initial,lastAccNb);
-            lastAccNb++;
+            createdAcc = new LowInterestAccount(name,initial,this.lastAccNb);
+            this.accounts.add(createdAcc);
+            this.lastAccNb++;
         }
-        else System.out.println("Error creating account, wrong acctype");
+        else System.out.println("Error creating account, wrong account type");
         return createdAcc;
     }
 
@@ -88,6 +87,12 @@ public class Bank {
      * @throws IllegalOperationException if not possible
      */
     void transfer(Account src, Account dst, double amount) throws IllegalOperationException {
-        // TODO implement this
+        if ((src.getAccountNumber() < 100000) || (src.getAccountNumber() > this.lastAccNb) || (dst.getAccountNumber() < 100000) || (dst.getAccountNumber() > this.lastAccNb)){
+            throw new IllegalOperationException("Specified accounts are not in the bank");
+        }
+        else{
+            src.withdraw(amount);
+            dst.deposit(amount);
+        }
     }
 }
