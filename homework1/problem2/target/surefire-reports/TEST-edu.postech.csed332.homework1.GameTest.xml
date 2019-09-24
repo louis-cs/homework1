@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="edu.postech.csed332.homework1.GameTest" time="0.045" tests="5" errors="3" skipped="0" failures="1">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="edu.postech.csed332.homework1.GameTest" time="0.038" tests="5" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -17,7 +17,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="FR"/>
     <property name="sun.boot.library.path" value="D:\Program files\JavaDK\bin"/>
-    <property name="sun.java.command" value="C:\Users\louis\AppData\Local\Temp\surefire4792689422769438764\surefirebooter1296993178451647727.jar C:\Users\louis\AppData\Local\Temp\surefire4792689422769438764 2019-09-24T22-14-21_067-jvmRun1 surefire84516744782915651tmp surefire_05575489490590039983tmp"/>
+    <property name="sun.java.command" value="C:\Users\louis\AppData\Local\Temp\surefire5522450308527416333\surefirebooter6488519538388954602.jar C:\Users\louis\AppData\Local\Temp\surefire5522450308527416333 2019-09-24T23-46-15_711-jvmRun1 surefire7965857280177151696tmp surefire_04006006879973803287tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="D:\Documents\Course Notes\Software Design Methods\homework1\homework1\problem2\target\test-classes;D:\Documents\Course Notes\Software Design Methods\homework1\homework1\problem2\target\classes;C:\Users\louis\.m2\repository\org\junit\jupiter\junit-jupiter\5.5.2\junit-jupiter-5.5.2.jar;C:\Users\louis\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.5.2\junit-jupiter-api-5.5.2.jar;C:\Users\louis\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\louis\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\louis\.m2\repository\org\junit\platform\junit-platform-commons\1.5.2\junit-platform-commons-1.5.2.jar;C:\Users\louis\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.5.2\junit-jupiter-params-5.5.2.jar;C:\Users\louis\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.5.2\junit-jupiter-engine-5.5.2.jar;C:\Users\louis\.m2\repository\org\junit\platform\junit-platform-engine\1.5.2\junit-platform-engine-1.5.2.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -33,7 +33,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\louis\AppData\Local\Temp\surefire4792689422769438764\surefirebooter1296993178451647727.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\louis\AppData\Local\Temp\surefire5522450308527416333\surefirebooter6488519538388954602.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="12.0.2+10"/>
@@ -58,42 +58,9 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="56.0"/>
   </properties>
-  <testcase name="testPlaceUnit" classname="edu.postech.csed332.homework1.GameTest" time="0.03">
-    <error message="class edu.postech.csed332.homework1.GroundMob cannot be cast to class java.lang.Comparable (edu.postech.csed332.homework1.GroundMob is in unnamed module of loader &apos;app&apos;; java.lang.Comparable is in module java.base of loader &apos;bootstrap&apos;)" type="java.lang.ClassCastException">java.lang.ClassCastException: class edu.postech.csed332.homework1.GroundMob cannot be cast to class java.lang.Comparable (edu.postech.csed332.homework1.GroundMob is in unnamed module of loader 'app'; java.lang.Comparable is in module java.base of loader 'bootstrap')
-	at edu.postech.csed332.homework1.GameTest.testPlaceUnit(GameTest.java:25)
-</error>
-    <system-out><![CDATA[got to the object adding part
-got to instanceof
-got to the first casting
-created casted temp variable
-]]></system-out>
-  </testcase>
-  <testcase name="testPlaceTwoUnits" classname="edu.postech.csed332.homework1.GameTest" time="0.001">
-    <error message="class edu.postech.csed332.homework1.AirMob cannot be cast to class java.lang.Comparable (edu.postech.csed332.homework1.AirMob is in unnamed module of loader &apos;app&apos;; java.lang.Comparable is in module java.base of loader &apos;bootstrap&apos;)" type="java.lang.ClassCastException">java.lang.ClassCastException: class edu.postech.csed332.homework1.AirMob cannot be cast to class java.lang.Comparable (edu.postech.csed332.homework1.AirMob is in unnamed module of loader 'app'; java.lang.Comparable is in module java.base of loader 'bootstrap')
-	at edu.postech.csed332.homework1.GameTest.testPlaceTwoUnits(GameTest.java:48)
-</error>
-    <system-out><![CDATA[got to the object adding part
-]]></system-out>
-  </testcase>
-  <testcase name="testGroundAttack" classname="edu.postech.csed332.homework1.GameTest" time="0.002">
-    <error message="class edu.postech.csed332.homework1.GroundTower cannot be cast to class java.lang.Comparable (edu.postech.csed332.homework1.GroundTower is in unnamed module of loader &apos;app&apos;; java.lang.Comparable is in module java.base of loader &apos;bootstrap&apos;)" type="java.lang.ClassCastException">java.lang.ClassCastException: class edu.postech.csed332.homework1.GroundTower cannot be cast to class java.lang.Comparable (edu.postech.csed332.homework1.GroundTower is in unnamed module of loader 'app'; java.lang.Comparable is in module java.base of loader 'bootstrap')
-	at edu.postech.csed332.homework1.GameTest.testGroundAttack(GameTest.java:64)
-</error>
-    <system-out><![CDATA[got to the object adding part
-]]></system-out>
-  </testcase>
-  <testcase name="testPlaceUnitInvalid" classname="edu.postech.csed332.homework1.GameTest" time="0.006">
-    <failure message="Unexpected exception type thrown ==&gt; expected: &lt;java.lang.IllegalArgumentException&gt; but was: &lt;java.lang.ClassCastException&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: Unexpected exception type thrown ==> expected: <java.lang.IllegalArgumentException> but was: <java.lang.ClassCastException>
-	at edu.postech.csed332.homework1.GameTest.testPlaceUnitInvalid(GameTest.java:36)
-Caused by: java.lang.ClassCastException: class edu.postech.csed332.homework1.GroundMob cannot be cast to class java.lang.Comparable (edu.postech.csed332.homework1.GroundMob is in unnamed module of loader 'app'; java.lang.Comparable is in module java.base of loader 'bootstrap')
-	at edu.postech.csed332.homework1.GameTest.lambda$testPlaceUnitInvalid$0(GameTest.java:37)
-	at edu.postech.csed332.homework1.GameTest.testPlaceUnitInvalid(GameTest.java:36)
-]]></failure>
-    <system-out><![CDATA[got to the object adding part
-got to instanceof
-got to the first casting
-created casted temp variable
-]]></system-out>
-  </testcase>
+  <testcase name="testPlaceUnit" classname="edu.postech.csed332.homework1.GameTest" time="0.025"/>
+  <testcase name="testPlaceTwoUnits" classname="edu.postech.csed332.homework1.GameTest" time="0"/>
+  <testcase name="testGroundAttack" classname="edu.postech.csed332.homework1.GameTest" time="0.001"/>
+  <testcase name="testPlaceUnitInvalid" classname="edu.postech.csed332.homework1.GameTest" time="0.003"/>
   <testcase name="testGameBoard" classname="edu.postech.csed332.homework1.GameTest" time="0.001"/>
 </testsuite>

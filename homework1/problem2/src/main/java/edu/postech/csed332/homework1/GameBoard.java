@@ -58,13 +58,15 @@ public class GameBoard {
      * @throws IllegalArgumentException if p is outside the bounds of the board.
      */
     public void placeUnit(Unit obj, Position p) {
-        if ((p.getX() > this.width) || (p.getY() > this.height) || (p.getX()<0) || (p.getY()<0)){ /*checking if p is on the board */
+        if ((p.getX() > this.width-1) || (p.getY() > this.height-1) || (p.getX()<0) || (p.getY()<0)){ /*checking if p is on the board */
             throw new IllegalArgumentException("position not on game board");
         }
         else if (obj.isGround()){                               /*checking if no unit is in p*/
             unitIterator = units.iterator();
             while (unitIterator.hasNext()){
-                if ((unitIterator.next().isGround()) && (unitIterator.next().getPosition().equals(p))){
+                Unit i;
+                i = unitIterator.next();
+                if ((i.isGround()) && (i.getPosition().equals(p))){
                     throw new IllegalArgumentException("Ground unit already on this board space");
                 }
             }
@@ -72,14 +74,15 @@ public class GameBoard {
         else if (!(obj.isGround())){
             unitIterator = units.iterator();
             while (unitIterator.hasNext()){
-                if (!(unitIterator.next().isGround()) && (unitIterator.next().getPosition().equals(p))){
+                Unit i;
+                i = unitIterator.next();
+                if (!(i.isGround()) && (i.getPosition().equals(p))){
                     throw new IllegalArgumentException("Air unit already on this board space");
                 }
             }
         }
-        System.out.println("got to the object adding part");
         if (obj instanceof GroundTower){
-            GroundTower newUnit = new GroundTower(this);
+            ((GroundTower) obj).setPos(p);
             towers.add((GroundTower)obj);
         }
         else if (obj instanceof AirTower){
@@ -91,16 +94,10 @@ public class GameBoard {
             monsters.add((AirMob)obj);
         }
         else if (obj instanceof GroundMob){
-            System.out.println("got to instanceof");
             ((GroundMob) obj).setPos(p);
-            System.out.println("got to the first casting");
-            Monster newUnit = (GroundMob)obj;
-            System.out.println("created casted temp variable");
             monsters.add((Monster)obj);
-            System.out.println("got to the second casting");
         }
         units.add(obj);
-
     }
 
     /**
@@ -125,8 +122,12 @@ public class GameBoard {
     public Set<Unit> getUnitsAt(Position p) {
         Set<Unit> unitsHere = new HashSet<>();
         unitIterator=units.iterator();
+        Unit i;
         while (unitIterator.hasNext()){
-            if (unitIterator.next().getPosition().equals(p)) unitsHere.add(unitIterator.next());
+            i = unitIterator.next();
+            if (i.getPosition().equals(p)) {
+                unitsHere.add(i);
+            }
         }
         return unitsHere;
     }

@@ -33,20 +33,25 @@ public class GroundTower implements Tower {
         HashSet<Unit> right = (HashSet) getBoard().getUnitsAt(pos.getRelativePosition(1,0));
         Iterator<Unit> localIterator;           /*add all adjacent ground monsters to the list of killed monsters, max 2 per position*/
         localIterator=up.iterator();
+        Unit i;
         while (localIterator.hasNext()){
-            if (localIterator.next() instanceof GroundMob) killedMonsters.add((Monster)localIterator.next());
+            i = localIterator.next();
+            if (i instanceof GroundMob) killedMonsters.add((Monster)i);
         }
         localIterator=down.iterator();
         while (localIterator.hasNext()){
-            if (localIterator.next() instanceof GroundMob) killedMonsters.add((Monster)localIterator.next());
+            i = localIterator.next();
+            if (i instanceof GroundMob) killedMonsters.add((Monster)i);
         }
         localIterator=left.iterator();
         while (localIterator.hasNext()){
-            if (localIterator.next() instanceof GroundMob) killedMonsters.add((Monster)localIterator.next());
+            i = localIterator.next();
+            if (i instanceof GroundMob) killedMonsters.add((Monster)i);
         }
         localIterator=right.iterator();
         while (localIterator.hasNext()){
-            if (localIterator.next() instanceof GroundMob) killedMonsters.add((Monster)localIterator.next());
+            i = localIterator.next();
+            if (i instanceof GroundMob) killedMonsters.add((Monster)i);
         }
         return killedMonsters;
     }

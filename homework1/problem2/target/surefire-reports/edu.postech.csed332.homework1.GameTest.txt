@@ -1,23 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: edu.postech.csed332.homework1.GameTest
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 1, Errors: 3, Skipped: 0, Time elapsed: 0.045 s <<< FAILURE! - in edu.postech.csed332.homework1.GameTest
-testPlaceUnit  Time elapsed: 0.03 s  <<< ERROR!
-java.lang.ClassCastException: class edu.postech.csed332.homework1.GroundMob cannot be cast to class java.lang.Comparable (edu.postech.csed332.homework1.GroundMob is in unnamed module of loader 'app'; java.lang.Comparable is in module java.base of loader 'bootstrap')
-	at edu.postech.csed332.homework1.GameTest.testPlaceUnit(GameTest.java:25)
-
-testPlaceTwoUnits  Time elapsed: 0.001 s  <<< ERROR!
-java.lang.ClassCastException: class edu.postech.csed332.homework1.AirMob cannot be cast to class java.lang.Comparable (edu.postech.csed332.homework1.AirMob is in unnamed module of loader 'app'; java.lang.Comparable is in module java.base of loader 'bootstrap')
-	at edu.postech.csed332.homework1.GameTest.testPlaceTwoUnits(GameTest.java:48)
-
-testGroundAttack  Time elapsed: 0.002 s  <<< ERROR!
-java.lang.ClassCastException: class edu.postech.csed332.homework1.GroundTower cannot be cast to class java.lang.Comparable (edu.postech.csed332.homework1.GroundTower is in unnamed module of loader 'app'; java.lang.Comparable is in module java.base of loader 'bootstrap')
-	at edu.postech.csed332.homework1.GameTest.testGroundAttack(GameTest.java:64)
-
-testPlaceUnitInvalid  Time elapsed: 0.006 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: Unexpected exception type thrown ==> expected: <java.lang.IllegalArgumentException> but was: <java.lang.ClassCastException>
-	at edu.postech.csed332.homework1.GameTest.testPlaceUnitInvalid(GameTest.java:36)
-Caused by: java.lang.ClassCastException: class edu.postech.csed332.homework1.GroundMob cannot be cast to class java.lang.Comparable (edu.postech.csed332.homework1.GroundMob is in unnamed module of loader 'app'; java.lang.Comparable is in module java.base of loader 'bootstrap')
-	at edu.postech.csed332.homework1.GameTest.lambda$testPlaceUnitInvalid$0(GameTest.java:37)
-	at edu.postech.csed332.homework1.GameTest.testPlaceUnitInvalid(GameTest.java:36)
-
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.038 s - in edu.postech.csed332.homework1.GameTest

@@ -76,6 +76,15 @@
       <change beforePath="$PROJECT_DIR$/../homework1/problem2/target/surefire-reports/TEST-edu.postech.csed332.homework1.GameTest.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../homework1/problem2/target/surefire-reports/edu.postech.csed332.homework1.GameTest.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../homework1/problem2/target/test-classes/edu/postech/csed332/homework1/GameTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/postech/csed332/homework1/GameBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/postech/csed332/homework1/GameBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/postech/csed332/homework1/GroundTower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/postech/csed332/homework1/GroundTower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/postech/csed332/homework1/AirMob.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/postech/csed332/homework1/AirMob.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/postech/csed332/homework1/AirTower.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/postech/csed332/homework1/AirTower.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/postech/csed332/homework1/GameBoard.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/postech/csed332/homework1/GameBoard.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/postech/csed332/homework1/GroundMob.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/postech/csed332/homework1/GroundMob.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/postech/csed332/homework1/GroundTower.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/postech/csed332/homework1/GroundTower.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-edu.postech.csed332.homework1.GameTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-edu.postech.csed332.homework1.GameTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/edu.postech.csed332.homework1.GameTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/edu.postech.csed332.homework1.GameTest.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
