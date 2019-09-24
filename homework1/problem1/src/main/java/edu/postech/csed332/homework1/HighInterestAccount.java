@@ -1,5 +1,7 @@
 package edu.postech.csed332.homework1;
 
+import static java.lang.Math.pow;
+
 /**
  * An account with a high interest rate and a minimum balance.
  * The rate is 1% per day. E.g., if the balance is initially 100,
@@ -9,41 +11,42 @@ package edu.postech.csed332.homework1;
 class HighInterestAccount implements Account {
     //TODO implement this
 
-    private double initialBalance;
     private String owner;
     private double balance;
     private int accNumber;
 
     public HighInterestAccount(String name, double initial, int accNb){
         this.owner=name;
-        this.initialBalance=initial;
+        this.balance=initial;
         this.accNumber=accNb;
     }
 
     public int getAccountNumber() {
-        //TODO implement this
-        return 0;
+        return this.accNumber;
     }
 
     public double getBalance() {
-        //TODO implement this
-        return 0;
+        return this.balance;
     }
 
     public String getOwner() {
-        //TODO implement this
-        return null;
+        return this.owner;
     }
 
     public void updateBalance(int elapsedDate) {
-        //TODO implement this
+        if (elapsedDate>=0){
+            this.balance=this.balance*pow(1.01,elapsedDate);
+        }
     }
 
     public void deposit(double amount) {
-        //TODO implement this
+        this.balance+=amount;
     }
 
     public void withdraw(double amount) throws IllegalOperationException {
-        //TODO implement this
+        if (this.balance-amount < 1000.0){
+            throw new IllegalOperationException("Insufficient funds");
+        }
+        else this.balance-=amount;
     }
 }
