@@ -26,24 +26,27 @@ public class AirTower implements Tower {
 
     @Override
     public Set<Monster> attack() {
-        Set<Monster> killedMonsters = new TreeSet<>();
-        TreeSet<Unit> up = (TreeSet) getBoard().getUnitsAt(pos.getRelativePosition(0,1)); /*get all units adjacent to the tower*/
-        TreeSet<Unit> down = (TreeSet) getBoard().getUnitsAt(pos.getRelativePosition(0,-1));
-        TreeSet<Unit> left = (TreeSet) getBoard().getUnitsAt(pos.getRelativePosition(-1,0));
-        TreeSet<Unit> right = (TreeSet) getBoard().getUnitsAt(pos.getRelativePosition(1,0));
-        for (int i=0; i<2; i++){                /*add all adjacent ground monsters to the list of killed monsters*/
-            if (up.first() instanceof AirMob) {
-                killedMonsters.add((Monster)up.pollFirst());
-            }
-            if (down.first() instanceof AirMob) {
-                killedMonsters.add((Monster)down.pollFirst());
-            }
-            if (left.first() instanceof AirMob) {
-                killedMonsters.add((Monster)left.pollFirst());
-            }
-            if (right.first() instanceof AirMob) {
-                killedMonsters.add((Monster)right.pollFirst());
-            }
+        Set<Monster> killedMonsters = new HashSet<>();
+        HashSet<Unit> up = (HashSet) getBoard().getUnitsAt(pos.getRelativePosition(0,1)); /*get all units adjacent to the tower*/
+        HashSet<Unit> down = (HashSet) getBoard().getUnitsAt(pos.getRelativePosition(0,-1));
+        HashSet<Unit> left = (HashSet) getBoard().getUnitsAt(pos.getRelativePosition(-1,0));
+        HashSet<Unit> right = (HashSet) getBoard().getUnitsAt(pos.getRelativePosition(1,0));
+        Iterator<Unit> localIterator;           /*add all adjacent ground monsters to the list of killed monsters, max 2 per position*/
+        localIterator=up.iterator();
+        while (localIterator.hasNext()){
+            if (localIterator.next() instanceof AirMob) killedMonsters.add((Monster)localIterator.next());
+        }
+        localIterator=down.iterator();
+        while (localIterator.hasNext()){
+            if (localIterator.next() instanceof AirMob) killedMonsters.add((Monster)localIterator.next());
+        }
+        localIterator=left.iterator();
+        while (localIterator.hasNext()){
+            if (localIterator.next() instanceof AirMob) killedMonsters.add((Monster)localIterator.next());
+        }
+        localIterator=right.iterator();
+        while (localIterator.hasNext()){
+            if (localIterator.next() instanceof AirMob) killedMonsters.add((Monster)localIterator.next());
         }
         return killedMonsters;
     }

@@ -33,9 +33,10 @@ public class GroundMob implements Monster {
         else{
             next = this.getPosition().getRelativePosition(0,1);
         }
-        TreeSet<Unit> nextUnits = (TreeSet)board.getUnitsAt(next);
-        for (int i=0; i<2; i++){
-            if (nextUnits.pollFirst() instanceof GroundMob) next = this.getPosition(); /*if there's a ground mob where this air mob wants to go, it waits in place */
+        HashSet<Unit> nextUnits = (HashSet)board.getUnitsAt(next);
+        Iterator<Unit> localIterator = nextUnits.iterator();
+        while (localIterator.hasNext()){
+            if (localIterator.next() instanceof GroundMob) next = this.getPosition(); /*if an airmob is where this one wants to go, it stands still*/
         }
         return next;
     }

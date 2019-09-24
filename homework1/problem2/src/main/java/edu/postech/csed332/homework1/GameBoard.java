@@ -21,9 +21,9 @@ public class GameBoard {
     private final Position goal;
     private final int width, height;
 
-    private Set<Tower> towers;
-    private Set<Monster> monsters;
-    private Set<Unit> units;
+    private HashSet<Tower> towers;
+    private HashSet<Monster> monsters;
+    private HashSet<Unit> units;
     private Iterator<Tower> towerIterator;
     private Iterator<Monster> monsterIterator;
     private Iterator<Unit> unitIterator;
@@ -43,9 +43,9 @@ public class GameBoard {
         goal = new Position(width - 1, height / 2);
 
 
-        this.towers = new TreeSet<>();
-        this.monsters = new TreeSet<>();
-        this.units = new TreeSet<>();
+        this.towers = new HashSet<>();
+        this.monsters = new HashSet<>();
+        this.units = new HashSet<>();
         this.NumMobsEscaped=0;
         this.NumMobsKilled=0;
     }
@@ -77,21 +77,27 @@ public class GameBoard {
                 }
             }
         }
+        System.out.println("got to the object adding part");
         if (obj instanceof GroundTower){
-            ((GroundTower) obj).setPos(p);
-            towers.add((Tower)obj);
+            GroundTower newUnit = new GroundTower(this);
+            towers.add((GroundTower)obj);
         }
         else if (obj instanceof AirTower){
             ((AirTower) obj).setPos(p);
-            towers.add((Tower)obj);
+            towers.add((AirTower)obj);
         }
         else if (obj instanceof AirMob){
             ((AirMob) obj).setPos(p);
-            monsters.add((Monster)obj);
+            monsters.add((AirMob)obj);
         }
         else if (obj instanceof GroundMob){
+            System.out.println("got to instanceof");
             ((GroundMob) obj).setPos(p);
+            System.out.println("got to the first casting");
+            Monster newUnit = (GroundMob)obj;
+            System.out.println("created casted temp variable");
             monsters.add((Monster)obj);
+            System.out.println("got to the second casting");
         }
         units.add(obj);
 
@@ -117,7 +123,7 @@ public class GameBoard {
      * @return the set of units at position p
      */
     public Set<Unit> getUnitsAt(Position p) {
-        Set<Unit> unitsHere = new TreeSet<>();
+        Set<Unit> unitsHere = new HashSet<>();
         unitIterator=units.iterator();
         while (unitIterator.hasNext()){
             if (unitIterator.next().getPosition().equals(p)) unitsHere.add(unitIterator.next());
@@ -169,7 +175,7 @@ public class GameBoard {
         }
         towerIterator=towers.iterator();
         while (towerIterator.hasNext()){
-            TreeSet<Monster> killedMobs = (TreeSet)towerIterator.next().attack();
+            HashSet<Monster> killedMobs = (HashSet)towerIterator.next().attack();
             monsterIterator=killedMobs.iterator();
             while (monsterIterator.hasNext()) {
                 monsters.remove(monsterIterator.next());
@@ -210,13 +216,16 @@ public class GameBoard {
                 break;
             }
             else{
-                TreeSet<Unit> localUnits = (TreeSet)this.getUnitsAt(unitIterator.next().getPosition()); /*check every unit at the current position*/
+                HashSet<Unit> localUnits = (HashSet)this.getUnitsAt(unitIterator.next().getPosition()); /*check every unit at the current position*/
                 if (localUnits.size()>1){
                     localUnits.remove(unitIterator.next());
-                    if ((localUnits.first().isGround() && (unitIterator.next().isGround())) /*2 air units or ground units on the same tile*/
-                        || !(localUnits.first().isGround()) && !(unitIterator.next().isGround())){
-                        isValid = false;
-                        break;
+                    Iterator<Unit> localIterator = localUnits.iterator();
+                    while (localIterator.hasNext()) {
+                        if ((localIterator.next().isGround() && (unitIterator.next().isGround())) /*2 air units or ground units on the same tile*/
+                                || !(localIterator.next().isGround()) && !(unitIterator.next().isGround())) {
+                            isValid = false;
+                            break;
+                        }
                     }
                 }
             }
@@ -288,4 +297,5 @@ return towers.size();
     public Position getGoalPosition() {
         return goal;
     }
+    
 }
